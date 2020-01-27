@@ -1,0 +1,405 @@
+<div class="content-area">
+  <ul class="clr-timeline clr-timeline-horizontal">
+    <li class="clr-timeline-step">
+      <clr-icon shape="success-standard" aria-label="Completed" *ngIf="tab==='template-selected' || templateReady ">
+      </clr-icon>
+      <clr-icon shape="dot-circle" aria-current="true" aria-label="Current" *ngIf="tab==='email-template'"></clr-icon>
+      <div class="clr-timeline-step-body">
+        <span class="clr-timeline-step-title">Select VMware defined layout</span>
+        <span class="clr-timeline-step-description">
+          VMware has defined layout, Please use this for starting with your email template </span>
+      </div>
+    </li>
+    <li class="clr-timeline-step">
+      <clr-icon shape="success-standard" aria-label="Completed" *ngIf="templateReady"></clr-icon>
+      <clr-icon shape="dot-circle" aria-current="true" aria-label="Current"
+        *ngIf="tab==='add-component' && !templateReady"></clr-icon>
+      <clr-icon shape="circle" aria-label="Not started"
+        *ngIf="tab==='email-template' || tab === 'template-selected' && !templateReady"></clr-icon>
+      <div class="clr-timeline-step-body">
+        <span class="clr-timeline-step-title">Add Components</span>
+        <span class="clr-timeline-step-description">You can drag and drop lists, line break, paragraphs to create
+          template </span>
+      </div>
+    </li>
+    <li class="clr-timeline-step disabled">
+      <clr-icon shape="circle" aria-label="Not started"
+        *ngIf="tab==='email-template' || tab==='add-component' || tab === 'template-selected'"></clr-icon>
+      <clr-icon shape="success-standard" aria-label="Completed" *ngIf="tab==='save-template'"></clr-icon>
+      <div class="clr-timeline-step-body">
+        <span class="clr-timeline-step-title">Save Template</span>
+        <span class="clr-timeline-step-description">Save and preview template</span>
+      </div>
+    </li>
+  </ul>
+  <div class="email-template" id="email-template" *ngIf="tab==='template-selected'">
+    <table width="100%" border="0" align="center" cellspacing="0" cellpadding="0">
+      <tbody>
+        <tr>
+          <td align="center">
+            <table style="table-layout:fixed;" width="650" border="0" cellspacing="0" cellpadding="0" align="center"
+              class="wrapper">
+              <tbody>
+                <tr>
+                  <td class="hide" height="1" style="line-height:0px; font-size:0px;"><img
+                      src="https://skyline.vmware.com/common/static/img/notification-files/spacer.gif" height="1"
+                      width="650" style="display:block; width:650px; min-width:650px;" border="0"></td>
+                </tr>
+                <tr>
+                  <td valign="top">
+                    <table width="650" border="0" cellspacing="0" cellpadding="0" align="center" class="wrapper"
+                      style="table-layout:auto;">
+                      <tbody>
+                        <tr>
+                          <td>
+                            <table width="650" border="0" cellspacing="0" cellpadding="0" align="center"
+                              class="wrapper">
+
+                              <tbody>
+                                <tr>
+                                  <td>
+                                    <table width="650" border="0" cellspacing="0" cellpadding="0" align="center"
+                                      class="wrapper">
+                                      <tbody>
+                                        <tr>
+                                          <td height="28" class="fix_height">&nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                          <td valign="top">
+                                            <table width="650" border="0" cellspacing="0" cellpadding="0" align="center"
+                                              class="wrapper">
+                                              <tbody>
+                                                <tr>
+                                                  <td width="25" class="hide"></td>
+                                                  <td valign="top">
+                                                    <table width="100%" border="0" cellspacing="0" cellpadding="0"
+                                                      align="center">
+                                                      <tbody>
+                                                        <tr>
+                                                          <td valign="top">
+                                                            <table width="138px" border="0" cellspacing="0"
+                                                              cellpadding="0" align="left" class="wrapper">
+                                                              <tbody>
+                                                                <tr>
+                                                                  <td align="center"><a href="http://www.vmware.com/"
+                                                                      target="_blank"><img
+                                                                        src="https://skyline.vmware.com/common/static/img/notification-files/vmware-logo-dark.png"
+                                                                        width="138px" alt="VMware"
+                                                                        style="display:block; max-width:138px; padding-bottom: "
+                                                                        border="0"></a></td>
+                                                                </tr>
+                                                              </tbody>
+                                                            </table>
+                                                            <table width="350" border="0" cellspacing="0"
+                                                              cellpadding="0" align="right" class="wrapper">
+                                                              <tbody>
+                                                                <tr>
+                                                                  <td valign="top" class="pad_top"
+                                                                    style="padding-top: 15px">
+                                                                    <table width="350" border="0" cellspacing="0"
+                                                                      cellpadding="0" align="center" class="wrapper">
+                                                                      <tbody>
+                                                                        <tr>
+                                                                          <td class="white1"
+                                                                            style="font-size:13px; line-height:16px; color:#0091da;"
+                                                                            align="right">SKYLINE NOTIFICATION</td>
+
+                                                                        </tr>
+                                                                      </tbody>
+                                                                    </table>
+                                                                  </td>
+                                                                </tr>
+                                                              </tbody>
+                                                            </table>
+                                                          </td>
+                                                        </tr>
+                                                      </tbody>
+                                                    </table>
+                                                  </td>
+                                                  <td width="25" class="hide"></td>
+                                                </tr>
+                                              </tbody>
+                                            </table>
+                                          </td>
+                                          <td width="30" class="hide"></td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td height="10" class="fix_height">&nbsp;</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <!-- END HEADER -->
+
+
+    <!-- TOP EMAIL CONTENT PADDING! -->
+    <table width="600" border="0" align="center" cellpadding="0" cellspacing="0" class="wrapper"
+      style="table-layout:fixed;" bgcolor="#ffffff">
+      <tbody>
+        <tr>
+          <td align="center"><img
+              src="https://skyline.vmware.com/common/static/img/notification-files/stripe-bar-gradient.jpg"
+              alt="fullwidhtimage" width="100%" height="8" border="0" class="full_img" style="display:block;"></td>
+        </tr>
+        <tr>
+          <td height="25" class="fix_height" style="line-height:0px; font-size:0px;">&nbsp;</td>
+        </tr>
+      </tbody>
+    </table>
+    <!-- END TOP EMAIL CONTENT PADDING -->
+
+
+    <!-- TEXT - FULLWIDTH LEFT ALIGN WITH BUTTON -->
+    <table width="600" border="0" align="center" cellpadding="0" cellspacing="0" class="wrapper"
+      style="table-layout:fixed;" bgcolor="#ffffff">
+      <tbody>
+        <tr>
+          <td height="15" class="fix_height" style="line-height:0px; font-size:0px;">&nbsp;</td>
+        </tr>
+        <tr>
+          <td class="pad_side">
+            <table width="600" border="0" cellspacing="0" cellpadding="0" class="wrapper">
+              <tbody>
+                <tr>
+                  <td width="45" class="hide">&nbsp;</td>
+                  <td>
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tbody id="content-section" (drop)="drop($event)" (dragover)="allowDrop($event)">
+                        <!-- <tr>
+                          <td class="black2" style="font-size:15px; line-height:20px; color:#333333;">
+                            Hello,
+                          </td>
+                        </tr> -->
+                        <tr>
+                          <td height="10" style="line-height:0px; font-size:0px;">&nbsp;</td>
+                        </tr>
+
+                      </tbody>
+                    </table>
+                  </td>
+                  <td width="45" class="hide">&nbsp;</td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td height="25" style="line-height:0px; font-size:0px;	">&nbsp;</td>
+        </tr>
+      </tbody>
+    </table>
+    <!-- END TEXT - FULLWIDTH LEFT ALIGN WITH BUTTON -->
+    <!-- SPACING MODULE -->
+    <table width="600" border="0" align="center" cellpadding="0" cellspacing="0" class="wrapper"
+      style="table-layout:fixed;">
+      <tbody>
+        <tr>
+          <td height="20" style="line-height:0px; font-size:0px;	">&nbsp;</td>
+        </tr>
+      </tbody>
+    </table>
+    <!-- END SPACING MODULE-->
+    <table width="100%" border="0" align="center" cellspacing="0" cellpadding="0" bgcolor="#f2f6f8">
+      <tbody>
+        <tr>
+          <td align="center"><img
+              src="https://skyline.vmware.com/common/static/img/notification-files/stripe-bar-gradient.jpg"
+              alt="fullwidhtimage" width="100%" height="8" border="0" class="full_img" style="display:block;"></td>
+        </tr>
+      </tbody>
+    </table>
+    <table width="100%" border="0" align="center" cellspacing="0" cellpadding="0" bgcolor="#f2f6f8">
+      <tbody>
+        <tr>
+          <td align="center">
+            <table width="650" border="0" cellspacing="0" cellpadding="0" align="center" class="wrapper">
+              <tbody>
+                <tr>
+                  <td>
+                    <table width="650" border="0" cellspacing="0" cellpadding="0" align="center" class="wrapper">
+                      <tbody>
+                        <tr>
+                          <td bgcolor="#f2f6f8" class="pad_side">
+                            <table width="650" border="0" cellspacing="0" cellpadding="0" align="center"
+                              class="wrapper">
+                              <tbody>
+                                <tr>
+                                  <td height="35" class="fix_height">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                  <td align="center">
+                                    <table width="650" border="0" cellspacing="0" cellpadding="0" align="center"
+                                      class="wrapper">
+                                      <tbody>
+                                        <tr>
+                                          <td width="100" class="hide">&nbsp;</td>
+                                          <td>
+                                            <table width="450" border="0" cellspacing="0" cellpadding="0" align="center"
+                                              class="wrapper">
+                                              <tbody>
+                                                <tr>
+                                                  <td align="center"><img align="center"
+                                                      src="https://skyline.vmware.com/common/static/img/notification-files/vmware-logo-dark.png"
+                                                      width="138" height="34" alt="VMware" style="display:block;"
+                                                      border="0"></td>
+                                                </tr>
+                                                <tr>
+                                                  <td height="20">&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                  <td align="center">
+                                                    <table border="0" cellspacing="0" cellpadding="0" align="center">
+                                                      <tbody>
+                                                        <tr>
+                                                          <td width="36"><a href="http://www.facebook.com/vmware"
+                                                              target="_blank"><img
+                                                                src="https://skyline.vmware.com/common/static/img/notification-files/icon-reverse-facebook-30x30.png"
+                                                                width="30" height="30" alt="Facebook"
+                                                                style="display:block;" border="0"></a></td>
+                                                          <td width="16">&nbsp;</td>
+                                                          <td width="36"><a href="http://twitter.com/vmware"
+                                                              target="_blank"><img
+                                                                src="https://skyline.vmware.com/common/static/img/notification-files/icon-reverse-twitter-30x30.png"
+                                                                width="30" height="30" alt="Twitter"
+                                                                style="display:block;" border="0"></a></td>
+                                                          <td width="16">&nbsp;</td>
+                                                          <td width="36"><a
+                                                              href="https://www.linkedin.com/company/vmware"
+                                                              target="_blank"><img
+                                                                src="https://skyline.vmware.com/common/static/img/notification-files/icon-reverse-linkedin-30x30.png"
+                                                                width="30" height="30" alt="LinkedIn"
+                                                                style="display:block;" border="0"></a></td>
+                                                          <td width="16">&nbsp;</td>
+                                                          <td width="36"><a href="http://blogs.vmware.com/"
+                                                              target="_blank"><img
+                                                                src="https://skyline.vmware.com/common/static/img/notification-files/icon-reverse-blog-30x30.png"
+                                                                width="30" height="30" alt="Blog" style="display:block;"
+                                                                border="0"></a></td>
+                                                          <td width="16">&nbsp;</td>
+                                                          <td width="36"><a href="http://www.youtube.com/vmwaretv"
+                                                              target="_blank"><img
+                                                                src="https://skyline.vmware.com/common/static/img/notification-files/icon-reverse-youtube-30x30.png"
+                                                                width="30" height="30" alt="YouTube"
+                                                                style="display:block;" border="0"></a></td>
+                                                          <td width="16">&nbsp;</td>
+                                                          <td width="36"><a
+                                                              href="http://www.vmware.com/my_vmware/overview.html"
+                                                              target="_blank"><img
+                                                                src="https://skyline.vmware.com/common/static/img/notification-files/icon-reverse-vmware-30x30.png"
+                                                                width="30" height="30" alt="My VMware"
+                                                                style="display:block;" border="0"></a></td>
+                                                          <td width="16">&nbsp;</td>
+                                                          <td width="36"><a href="http://www.vmug.com/"
+                                                              target="_blank"><img
+                                                                src="https://skyline.vmware.com/common/static/img/notification-files/icon-reverse-vmug-30x30.png"
+                                                                width="30" height="30" alt="vmug" style="display:block;"
+                                                                border="0"></a></td>
+                                                        </tr>
+                                                      </tbody>
+                                                    </table>
+                                                  </td>
+                                                </tr>
+                                                <tr>
+                                                  <td height="60">&nbsp;</td>
+                                                </tr>
+                                              </tbody>
+                                            </table>
+                                          </td>
+                                          <td width="100" class="hide">&nbsp;</td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td height="35" class="fix_height" align="center"
+                                    style="font-size:8px; color:#999999;">
+                                    xxxxxx</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="clr-row" *ngIf="alert">
+    <div class="clr-col-sm-12">
+      <div class="alert alert-success" role="alert">
+        <div class="alert-items">
+          <div class="alert-item static">
+            <div class="alert-icon-wrapper">
+              <clr-icon class="alert-icon" shape="check-circle"></clr-icon>
+            </div>
+            <span class="alert-text">{{alert}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<nav class="sidenav">
+  <section class="sidenav-content">
+    <section class="nav-group collapsible" disabled="tab!==email-template">
+      <input id="tabexample1" type="checkbox">
+      <label for="tabexample1">Vmware defined layout</label>
+      <ul class="nav-list">
+        <li><a class="nav-link" (click)="step('template-selected')">Layout 1</a></li>
+      </ul>
+
+    </section>
+    <section class="nav-group collapsible" [hidden]="!(tab==='template-selected')">
+      <input id="tabexample1" type="checkbox">
+      <label for="tabexample1" (click)="step('add-component')">Add Components</label>
+      <ul class="nav-list">
+        <li><a class="nav-link" (click)="addedComponent(true)" id="salutation" draggable="true"
+            (dragstart)="drag($event)">Salutation</a></li>
+        <li><a class="nav-link" id="line-break" draggable="true" (dragstart)="drag($event)">Line Break</a></li>
+        <li><a class="nav-link" id="paragraph" draggable="true" (dragstart)="drag($event)">Paragraph</a></li>
+      </ul>
+    </section>
+    <a class="nav-link" (click)="step('save-template')" [hidden]="(tab==='email-template')">Save Layout</a>
+  </section>
+</nav>
+
+<!-- <ng-template #salutation [hidden]=true></ng-template> -->
+<div [hidden]="true">
+  <tr show-info="salutation">
+    <td class="black2" style="font-size:15px; line-height:20px; color:#333333;"> Dear
+      Customer,
+    </td>
+  </tr>
+  <tr show-info="line-break">
+    <td height="10" style="line-height:0px; font-size:0px;">&nbsp;</td>
+  </tr>
+  <tr show-info="paragraph">
+    <td class="black2" style="font-size:15px; line-height:20px; color:#333333;">
+      The Operational Summary Report provides you with details concerning potential issues
+      proactively identified by Skyline. For each issue, a recommendation is provided to guide
+      you in resolving the issue before it has an impact on your VMware environment. </td>
+  </tr>
+
+</div>
